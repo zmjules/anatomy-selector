@@ -11,3 +11,13 @@ Prerequisites:
 To run:
 - Run 'python AnatomySelector.py' from the root project directory
 
+Test cases: 
+- Select all 
+- Deselect all
+- Select a checkbox with ancestors
+- Select a checkbox with no ancestors
+- Deselect a checkbox with descendants
+- Deselect a checkbox with no descendants
+- Select a checkbox with the same text as another checkbox
+- Deselect a checkbox with the same text as another checkbox
+- Select/deselect checkboxes that are in different unrelated nodes of the tree
