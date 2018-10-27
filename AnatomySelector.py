@@ -15,20 +15,22 @@ class MyGUI:
         # Create dictionary to associate a node ID with the state of its corresponding checkbox
         self.checkboxes = {}
     
-        # Draw static buttons
-        master.title("Julia's Anatomy Selector!")
+        # Set window options
+        master.title("Anatomy Selector")
+        master.geometry("700x400")
 
-        self.label = Label(master, text="Select a Region:").grid(row=1, sticky=W)
+         # Draw static buttons
+        self.label = Label(master, text="Select a Region:").grid(row=2, sticky=W)
 
-        self.selectAllBtn = Button(root, text='Select All', command=self.selectAll).grid(row=15, sticky = W)
+        self.selectAllBtn = Button(root, text='Select All', command=self.selectAll).grid(row=40, sticky = W)
 
-        self.deselectAllBtn = Button(root, text='Reset', command=self.deselectAll).grid(row=16, sticky = W)
+        self.deselectAllBtn = Button(root, text='Reset', command=self.deselectAll).grid(row=42, sticky = W)
 
         # Draw tree, define checkbox state variable, and define function for when a button is clicked
         i = 1
         for node in PreOrderIter(self.bStructure):
             var = IntVar()
-            tmpCheckBtn = Checkbutton(master, text=node.name, variable=var, command=lambda name = node.id: self.onclick(name)).grid(row=i+1, column= node.depth+1, sticky=W)
+            tmpCheckBtn = Checkbutton(master, text=node.name, variable=var, command=lambda name = node.id: self.onclick(name)).grid(row=i+2, column= node.depth+1, sticky=W)
             i += 1
             self.checkboxes[node.id] = var
     
