@@ -81,14 +81,14 @@ class MyGUI:
     # Checks off all boxes when Select All is clicked 
     def selectAll(self): 
         for key, value in self.checkboxes.items():
-            tmpSelectBtn = self.checkboxes[key]
-            tmpSelectBtn.set(1)
+            tmpBtn = self.checkboxes[key]
+            tmpBtn.set(1)
 
     # Checks off all boxes when Reset is clicked
     def deselectAll(self):
         for key, value in self.checkboxes.items():
-            tmpDeselectBtn = self.checkboxes[key]
-            tmpDeselectBtn.set(0)
+            tmpBtn = self.checkboxes[key]
+            tmpBtn.set(0)
 
 
 root = Tk()
